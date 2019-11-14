@@ -1,0 +1,8 @@
+header, h1, nav{
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-align: center;
+    margin: 10px;
+}

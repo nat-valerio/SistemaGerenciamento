@@ -1,0 +1,27 @@
+header{
+    text-align: center;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 1em;
+}
+
+div{
+    margin: 15px;
+}
+
+input{
+    height: 30px;
+    width: 350px;
+    background-color: aliceblue;
+    border: 0.5px solid darkgray;
+    border-radius: 7px;
+}
+
+div#btn{
+    display: flex;
+    justify-content: center;
+}
