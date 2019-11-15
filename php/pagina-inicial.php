@@ -28,8 +28,10 @@
 <body>
     <div>
         <header>    
-            <h1>Seja bem vindo!</h1>
-            <h3>Situação: <?php $_SESSION ? "Logado" : "Deslogado" ?></h3>
+            <h1>Seja bem vindo!</h1><br>
+            <div>
+                <h3>Situação: <?php $_SESSION ? "Logado" : "Deslogado" ?></h3>
+            </div>
         </header>
 
         <nav>

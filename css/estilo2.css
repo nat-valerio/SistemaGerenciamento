@@ -21,7 +21,7 @@ input{
     border-radius: 7px;
 }
 
-div#btnLog{
+div#btn{
     display: flex;
     justify-content: center;
 }

@@ -10,10 +10,10 @@
 <body>
 
     <div>
-        <header><h1>Login</h1></header>
-
         <main>
             <form action="verifica.php" method="post">
+                <header><h1>Login</h1></header>
+                
                 <div>
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email">
