@@ -29,15 +29,17 @@
     <div>
         <header>    
             <h1>Seja bem vindo!</h1><br>
-            <div>
-                <h3>Situação: <?php $_SESSION ? "Logado" : "Deslogado" ?></h3>
-            </div>
         </header>
+
+        <div>
+            <h3>Situação: <?php $_SESSION ? "Logado" : "Deslogado" ?></h3>
+        </div>
 
         <nav>
             <a href="cadastro.php">Cadastre-se</a>
             <a href="login.php">Login</a>
             <a href="logout.php">Logout</a>
+            <a href="blog.php">Blog</a>
         </nav>
     </div>
     
