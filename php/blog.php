@@ -14,6 +14,7 @@
     </header>
 
     <main>
+    <form action="verifica.php?id=<?php echo $linha['id'] ?>"></form>
         <div>
             <label for="">Texto: </label>
             <textarea name="textoform" id="texto"></textarea>
