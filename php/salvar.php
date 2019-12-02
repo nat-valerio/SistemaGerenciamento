@@ -2,12 +2,19 @@
     
     include('conn.php');
 
-    $usuario = $_POST['username'];
+    $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['password'];
+    $senha = $_POST['senha'];
     $senha = md5($senha);
 
-    $sql= "INSERT INTO usuarios (usuario, email, senha) 
-            VALUES ('$usuario', '$email', '$senha')";
-
-    $conn->query($sql);
+    $sql= "INSERT INTO Usuarios (nome, email, senha) 
+            VALUES ('$nome', '$email', '$senha')";
+        
+    if($conn->query($sql) == TRUE){
+       echo "Dado inserido com sucesso!";
+       header('Location: blog.php');
+    }
+    else{
+       echo "Erro: ". $conn->error;
+    }        
+    $conn->close();

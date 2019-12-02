@@ -12,7 +12,7 @@
 <div>
     <main>
 
-        <form action="salvar.php">
+        <form action="salvar.php" method="post">
 
             <header><h1>Cadastro</h1></header>
 

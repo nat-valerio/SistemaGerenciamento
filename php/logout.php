@@ -4,4 +4,4 @@ session_start();
 
 $_SESSION['login'] = "false";
 
-header('Location: pagina-inicial.php');
+header('Location: index.php');

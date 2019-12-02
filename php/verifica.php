@@ -1,14 +1,14 @@
 <?php
 
-    session-start();
+    session_start();
 
     include('conn.php');
 
-    $usuario = $_POST['username'];
+    $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['password'];
+    $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuarios WHERE usuarios='$usuario'";
+    $sql = "SELECT * FROM usuarios WHERE usuarios='$email'";
 
     if($resultado->num_rows > 0){
         $linha = $resultado->fetch_assoc();
@@ -24,4 +24,4 @@
     else{
         echo "Usuário ou senha inválido";
     }
-}
+?>

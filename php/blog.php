@@ -1,3 +1,21 @@
+<?php 
+    include('conn_noticias.php');
+
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM  noticias WHERE id='$id'";
+
+    $resultado = $conn->query($sql);
+
+    if($resultado->num_rows > 0){
+        $linhas = true;
+        $linha = $resultado->fetch_assoc();
+    }
+    else{
+        $linhas = false;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +26,21 @@
     <title>Blog</title>
 </head>
 <body>
-
-    <header>
-        <h1>Últimas postagens</h1>
-    </header>
-
     <main>
-    <form action="verifica.php?id=<?php echo $linha['id'] ?>"></form>
-        <div>
-            <label for="">Texto: </label>
-            <textarea name="textoform" id="texto"></textarea>
-        </div>
+    <form action="salvar_noticias.php?id=<?php echo $linha['id'] ?>"></form>
+        <?php
+            if(isset($_SESSION['logado']) && $_SESSION['logado']){
+                echo "<div>";
+                    echo "<label>'Texto: '</label>";
+                    echo "<textarea name='textoform' id='texto'></textarea>";
+                    echo "<input type='submit' value='Enviar'>";
+                echo "</div>";
+            }else{
+                echo "<header><h1>Últimas postagens</h1></header>";
+                echo url("mostrar_noticias.php?id=<?php echo $linha['id'] ?>");
+            }
+      
+        ?>
     </main>
     
 </body>
